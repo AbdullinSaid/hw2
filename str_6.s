@@ -12,8 +12,8 @@ str:
 .LC0:
 	.string	"start index %d "
 	.text
-	.globl	search_sequence
-	.type	search_sequence, @function
+	.globl	search_sequence                            # функция search_sequence
+	.type	search_sequence, @function                 # объявление что search_sequence это функция
 search_sequence:
 	endbr64
 	push	rbp
@@ -146,7 +146,7 @@ main:
 	mov	eax, DWORD PTR -4[rbp]
 	mov	esi, edx
 	mov	edi, eax
-	call	search_sequence
+	call	search_sequence                       # вызов search_sequence
 	mov	eax, 0
 .L15:
 	leave
